@@ -63,9 +63,10 @@ function createArticle(title,time,maxcount,count) {
     return articleItem;
 }  
 
-    const countPerson = document.querySelector('.count-person');
-    const addButton = document.querySelector('.btn');
+    const countPerson = document.querySelectorAll('count-person');
+    const addButton = document.querySelectorAll('btn');
     
+   
     addButton.addEventListener('click',() => {
         for (let i = 0; i < articlesData.length; i++) {
             if (articlesData[i].count < articlesData[i].maxcount) {
@@ -81,8 +82,9 @@ function createArticle(title,time,maxcount,count) {
             
         }
     });
+    
 
-    const deleteButton = document.querySelector('.btn-danger');
+    const deleteButton = document.querySelectorAll('btn-danger');
     deleteButton.addEventListener('click',() => {
         for (let i = 0; i < articlesData.length; i++) {
             if (articlesData[i].count > 0) {
